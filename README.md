@@ -1,5 +1,5 @@
-<!doctipe html>
-<html="ru">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>Шилюк Алексей</title>
