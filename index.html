@@ -72,15 +72,15 @@
     <div id="container">
             <form class="mainform" name="Обратная связь">
                  <p class="name">
-                 <input type="text" name="name" value="Фамилия, имя, отчество" />
+                 <input type="text" name="name" value="Фамилия, имя, отчество" onblur="if(this.value.length == 0) this.value = 'Фамилия, имя, отчество'" onfocus="if(this.value == 'Фамилия, имя, отчество') this.value = '' "/>
                        <label for="name">Введите имя</label>
                  </p>
                <p class="email">
-                 <input type="text" name="email" value="name@example.com" />
+                 <input type="text" name="email" value="name@example.com" onblur="if(this.value.length == 0) this.value = 'name@example.com'" onfocus="if(this.value == 'name@example.com') this.value = '' "/>
                      <label for="email" >E-Mail</label>
                 </p>
                 <p class="msg">
-                 <textarea name="msg">Текст сообщения</textarea>
+                    <textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
                   </p>
                   <p><input name="Согласие на обработку данных" type="checkbox"/>
 
