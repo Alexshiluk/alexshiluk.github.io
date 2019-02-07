@@ -68,7 +68,7 @@
             </tb>
         </tr>
     </table>
-    <p><a name="4">Обратная информация</a></p>
+    <p><a name="4">Обратная Связь</a></p>
     <div id="container">
             <form class="mainform" name="Обратная связь">
                  <p class="name">
@@ -82,13 +82,49 @@
                 <p class="msg">
                     <textarea name="msg" onblur="if(this.value.length == 0) this.value = 'Текст сообщения'" onfocus="if(this.value == 'Текст сообщения') this.value=''">Текст сообщения</textarea>
                   </p>
-                  <p><input name="Согласие на обработку данных" type="checkbox"/>
-
-                  </p>
-                  <p class="send" >
-                 <input type="submit" value="Отправить"  />
+                  <style>
+                        #link {
+                          position: relative;
+                        }
+                        #link a {
+                          pointer-events: none;
+                        }
+                        #link:hover:before {
+                          display: block;
+                          content: "Подтвердите своё согласие на обработку данных";
+                          position: absolute;
+                          top: 0; left: 50%;
+                          transform: translate(-50%, calc(-100% - 10px));
+                          border-radius: 3px;
+                          padding: 10px;
+                          background: #f7f7f7;
+                          box-shadow: 0 0 2px;
+                        }
+                        #link:hover:after {
+                          display: block;
+                          content: "";
+                          position: absolute;
+                          top: 0; left: 50%;
+                          transform: translate(-50%, -50%);
+                          border-style: solid;
+                          border-width: 10px;
+                          border-color: #f7f7f7 transparent transparent transparent;
+                        }
+                        #linkDa:checked ~ #link a {
+                          pointer-events: auto;
+                        }
+                        #linkDa:checked ~ #link:after, #linkDa:checked ~ #link:before {
+                          content: none;
+                        }
+                        </style>
+                        <input type="checkbox" id="linkDa"/><label for="linkDa">Я согласен на обработку данных</label><br>
+                        <span id="link"><input type="submit" value="Отправить"  /></span>
                </p>
             </form>
             </div>
+    <footer>
+            <a href="https://vk.com/benny401"><img src="/vk.png"></a>
+            
+    </footer>
 </body>
 </html>
