@@ -13,7 +13,7 @@
      padding: 0px;
      background: rgb(242, 255, 129);
      border: 1px solid rgb(83, 47, 0);
-     height: 50px;
+     height: 80px;
     }
     a {text-decoration: none;} 
    </style>
@@ -55,5 +55,26 @@
         </tr>
     </table>
     <p><a name="4">Обратная информация</a></p>
+    <div id="container">
+            <form class="mainform" name="Обратная связь">
+                 <p class="name">
+                 <input type="text" name="name" value="Фамилия, имя, отчество" />
+                       <label for="name">Введите имя</label>
+                 </p>
+               <p class="email">
+                 <input type="text" name="email" value="name@example.com" />
+                     <label for="email" >E-Mail</label>
+                </p>
+                <p class="msg">
+                 <textarea name="msg">Текст сообщения</textarea>
+                  </p>
+                  <p><input name="Согласие на обработку данных" type="checkbox"/>
+
+                  </p>
+                  <p class="send" >
+                 <input type="submit" value="Отправить"  />
+               </p>
+            </form>
+            </div>
 </body>
 </html>
